@@ -1,5 +1,11 @@
 # Content Creation Portfolio
 
+## Explore My Work
+
+- [Scripts](Scripts.md)
+- [Campaigns](Campaigns/)
+- [Creative Ideas](Creative-Ideas.md)
+
 ## About Me
 
 I’m a creative Content Creator who is passionate about developing ideas, writing scripts, and creating engaging social media content. I’m obsessed with creating advertisements and turning creative ideas into engaging campaigns that capture people’s attention. I enjoy using storytelling to connect with audiences and bring creative concepts to life.
