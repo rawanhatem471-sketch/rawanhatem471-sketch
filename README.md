@@ -26,6 +26,6 @@ A collection of creative advertising campaigns and concepts I have worked on.
 
 Creative scripts written for social media videos and advertising content.
 
-### 💡 [CreativeIdeas](Creative Ideas/)
+### 💡 [CreativeIdeas](CreativeIdeas/)
 
 Creative concepts and ideas developed for different brands and campaigns.
