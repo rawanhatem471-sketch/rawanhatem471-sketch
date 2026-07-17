@@ -22,7 +22,7 @@ I’m a creative Content Creator who is passionate about developing ideas, writi
 
 A collection of creative advertising campaigns and concepts I have worked on.
 
-### ✍️ [Scripts](Campaigns/)
+### ✍️ [Scripts](Scripts/)
 
 Creative scripts written for social media videos and advertising content.
 
