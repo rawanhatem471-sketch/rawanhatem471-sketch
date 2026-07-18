@@ -6,7 +6,6 @@
 
     <title>Rawan Hatem</title>
 
-    <!-- مكتبة بتحول Markdown إلى HTML -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
@@ -15,7 +14,7 @@
     <div id="readme-content"></div>
 
     <script>
-        fetch('README.md')
+        fetch('./README.md')
             .then(response => response.text())
             .then(markdown => {
                 document.getElementById('readme-content').innerHTML =
