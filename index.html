@@ -19,8 +19,11 @@
     </main>
 
     <script>
+
         fetch('README.md')
+
             .then(response => response.text())
+
             .then(markdown => {
 
                 const content = document.getElementById('readme-content');
@@ -62,75 +65,111 @@
                 }
 
 
-              /* =========================
-   MY PROJECTS
-========================= */
+                /* =========================
+                   MY PROJECTS
+                ========================= */
 
-const projectsHeading = [...content.querySelectorAll('h2')]
-    .find(h2 => h2.textContent.trim() === 'My Projects');
+                const projectsHeading = [...content.querySelectorAll('h2')]
+                    .find(h2 => h2.textContent.trim() === 'My Projects');
 
-if (projectsHeading) {
+                if (projectsHeading) {
 
-    const projectList = document.createElement('div');
-    projectList.className = 'project-list';
+                    const projectList = document.createElement('div');
 
-    const projectTitles = [...content.querySelectorAll('h3')];
+                    projectList.className = 'project-list';
 
-    projectTitles.forEach(titleElement => {
+                    let current = projectsHeading.nextElementSibling;
 
-        const projectName = titleElement.textContent.trim();
 
-        const description = titleElement.nextElementSibling;
+                    while (current) {
 
-        const card = document.createElement('a');
+                        const next = current.nextElementSibling;
 
-        card.className = 'project-card';
 
-        if (projectName === 'Campaigns') {
-            card.href = 'campaigns.html';
-        }
+                        if (current.tagName === 'H3') {
 
-        else if (projectName === 'Scripts') {
-            card.href = 'scripts.html';
-        }
+                            const projectName =
+                                current.textContent.trim();
 
-        else if (projectName === 'Creative_Ideas') {
-            card.href = 'creative-ideas.html';
-        }
+                            const description =
+                                current.nextElementSibling;
 
-        const title = document.createElement('span');
-        title.textContent = projectName;
 
-        card.appendChild(title);
+                            const card =
+                                document.createElement('a');
 
-        if (description && description.tagName === 'P') {
+                            card.className =
+                                'project-card';
 
-            const descriptionText = document.createElement('p');
 
-            descriptionText.textContent = description.textContent;
+                            if (projectName.includes('Campaigns')) {
 
-            card.appendChild(descriptionText);
-        }
+                                card.href =
+                                    'campaigns.html';
+                            }
 
-        projectList.appendChild(card);
+                            else if (projectName.includes('Scripts')) {
 
-        titleElement.remove();
+                                card.href =
+                                    'scripts.html';
+                            }
 
-        if (description && description.tagName === 'P') {
-            description.remove();
-        }
-    });
+                            else if (projectName.includes('Creative_Ideas')) {
 
-    projectsHeading.after(projectList);
-} 
+                                card.href =
+                                    'creative-ideas.html';
+                            }
+
+
+                            const title =
+                                document.createElement('span');
+
+                            title.textContent =
+                                projectName;
+
+
+                            card.appendChild(title);
+
+
+                            if (
+                                description &&
+                                description.tagName === 'P'
+                            ) {
+
+                                const descriptionText =
+                                    document.createElement('p');
+
+                                descriptionText.textContent =
+                                    description.textContent;
+
+
+                                card.appendChild(
+                                    descriptionText
+                                );
+                            }
+
+
+                            projectList.appendChild(card);
+                        }
+
+
+                        current = next;
+                    }
+
+
+                    projectsHeading.after(projectList);
+                }
 
             })
+
+
             .catch(error => {
 
                 document.getElementById('readme-content').innerHTML =
                     '<p>Could not load README.</p>';
 
             });
+
     </script>
 
 </body>
