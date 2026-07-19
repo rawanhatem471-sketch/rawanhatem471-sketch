@@ -1,80 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
-:root {
-    --cream: #f4f0e8;
-    --black: #111111;
-    --purple: #7447ff;
-    --lime: #d8ff3e;
-    --pink: #ff6b9d;
-}
-
-body {
-    margin: 0;
-    background: var(--cream);
-    color: var(--black);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#readme-content {
-    max-width: 1200px;
-    margin: auto;
-    padding: 60px 40px 100px;
-}
-
-/* HERO */
-
-h1 {
-    font-size: clamp(65px, 12vw, 150px);
-    line-height: 0.85;
-    letter-spacing: -8px;
-    max-width: 900px;
-    margin: 30px 0 20px;
-    font-weight: 900;
-}
-
-h1 + p {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 80px;
-}
-
-/* TEXT */
-
-p {
-    max-width: 750px;
-    font-size: 18px;
-    line-height: 1.7;
-}
-
-/* SECTIONS */
-
-h2 {
-    margin-top: 110px;
-    margin-bottom: 35px;
-    font-size: 55px;
-    letter-spacing: -3px;
-    text-transform: uppercase;
-}
-
-h3 {
-    font-size: 28px;
-    margin: 0;
-}
-
-/* LINKS */
-
-a {
-    color: var(--black);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-a:hover {
-    background: var(--lime);
-}
-
 /* MY PROJECTS */
 
 h2:has(+ h3) {
@@ -104,33 +27,15 @@ h3 + p {
     max-width: none;
 }
 
-/* HORIZONTAL LINE */
+/* PROJECT LINKS */
 
-hr {
-    border: none;
-    border-top: 3px solid var(--black);
-    margin: 70px 0;
-}
-
-/* CREATIVE LABEL */
-
-body::before {
-    content: "IDEAS / WORDS / ADS";
-    position: fixed;
-    top: 20px;
-    right: 30px;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-/* DECORATION ONLY — NO ANIMATION */
-
-body::after {
-    content: "✦";
-    position: fixed;
-    bottom: 30px;
-    right: 40px;
-    font-size: 60px;
+h3 a {
     color: var(--purple);
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h3 a:hover {
+    color: #5b2ee8;
+    transform: translateX(8px);
 }
